@@ -31,6 +31,7 @@ a:hover {
   position: fixed;
   text-align: center;
 }
+
 .nav {
   display: flex;
   justify-content: space-around;
@@ -45,26 +46,39 @@ a:hover {
     margin-right: auto;
     color: white;
 }
+
 .nav li {
   padding: 5px 10px 10px 10px;
 }
+
 .nav a {
   transition: all .5s;
 }
+
 .nav a:hover {
   color: white
 }
 
-header {
+.index-header {
   text-align: center;
   background: url('images/mountains.JPG') no-repeat top center ;
   background-size: cover;
   overflow: hidden;
   padding-top: 60px;
 }
+
+.experience-header {
+  text-align: center;
+  background: url('images/beach.JPG') no-repeat top center ;
+  background-size: cover;
+  overflow: hidden;
+  padding-top: 60px;
+}
+
 header {
   line-height: 1.5;
 }
+
 header .profile-image {
   margin-top: 50px;
   width: 150px;
@@ -73,9 +87,7 @@ header .profile-image {
   border: 5px solid #5b6575;
   transition: all .5s;
 }
-header .profile-image:hover {
-  transform: scale(1.2) rotate(5deg);
-}
+
 .tag {
   background-color: #5b6575;
   color: white;
@@ -84,10 +96,12 @@ header .profile-image:hover {
   display: table;
   margin: 10px auto;
 }
+
 .location {
   background-color: #222;
   color: lightsteelblue;
 }
+
 .card {
   margin: 30px;
   padding: 20px 40px 40px;
@@ -98,8 +112,40 @@ header .profile-image:hover {
   border-radius: 6px;
   transition: all .5s;
 }
+
+.experience-card {
+  margin: 20px;
+  padding: 40px 40px 40px;
+  max-width: 880px;
+  text-align: left;
+  background: #fff;
+  border-bottom: 4px solid #ccc;
+  border-radius: 6px;
+  transition: all .5s;
+}
+
 .card:hover {
   border-color: #8091ab;
+}
+
+.experience-card:hover {
+  border-color: #8091ab;
+}
+
+.experience-image {
+  margin: 0 auto;
+  width: 800px;
+  height: 450px;
+  border: solid 2px #ccc;
+  transition: all .5s;
+}
+
+img:hover {
+  border-color: #8091ab;
+}
+
+p {
+  padding-bottom: 20px;
 }
 
 ul.skills {
@@ -161,18 +207,48 @@ a.social {
 a.twitter {
   background-image: url(images/twitter.svg);
 }
+
 a.linkedin {
   background-image: url(images/linkedin.svg);
 }
+
 a.github {
   background-image: url(images/github.svg);
 }
+
 a.social:hover {
   opacity: 1;
 }
+
 .clearfix {
   clear: both;
 }
+/* Spinning Profile Image */
+
+.rotate {
+    -webkit-animation: spin 4s infinite linear;
+    animation: spin 4s infinite linear;
+}
+@-webkit-keyframes spin {
+    100% { -webkit-transform: rotate(-360deg); }
+}
+@-moz-keyframes spin {
+    100% { -moz-transform: rotate(-360deg); }
+}
+@keyframes spin {
+    from {
+        -moz-transform:rotate(-360deg);
+        -o-transform:rotate(-360deg);
+        transform:rotate(-360deg);
+    }
+      15%, 100% {
+        -moz-transform:rotate(0deg);
+        -o-transform:rotate(0deg);
+        transform:rotate(0deg);
+      }
+
+}
+
 
 /* Styles for larger screens */
 @media screen and (min-width: 720px) {
